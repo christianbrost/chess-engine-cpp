@@ -2,7 +2,7 @@
 
 schachspiel für 2 spieler, alle regeln drin: zugvalidierung für jede figur, rochade, en passant, bauernumwandlung, schach/schachmatt/patt-erkennung.
 
-**[im browser spielen](https://bigpython0.github.io/Chess/)**
+**[im browser spielen](https://christianbrost.github.io/chess-engine-cpp/)**
 
 die spiellogik hab ich komplett selbst in c++17 geschrieben, lief anfangs nur als natives SFML-fenster. die trennung von logik und SFML-oberfläche + den webassembly-port für den browser hab ich mit claude umgesetzt.
 

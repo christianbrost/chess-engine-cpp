@@ -1,27 +1,27 @@
-# C++ Schach
+# C++ Chess
 
-schachspiel für 2 spieler, alle regeln drin: zugvalidierung für jede figur, rochade, en passant, bauernumwandlung, schach/schachmatt/patt-erkennung.
+2-player chess game, all rules included: move validation for every piece, castling, en passant, pawn promotion, check/checkmate/stalemate detection.
 
-**[im browser spielen](https://christianbrost.github.io/chess-engine-cpp/)**
+**[play in browser](https://christianbrost.github.io/chess-engine-cpp/)**
 
-die spiellogik hab ich komplett selbst in c++17 geschrieben, lief anfangs nur als natives SFML-fenster. die trennung von logik und SFML-oberfläche + den webassembly-port für den browser hab ich mit claude umgesetzt.
+I wrote the game logic entirely myself in c++17, it initially only ran as a native SFML window. the separation of logic and SFML interface + the webassembly port for the browser I did with claude.
 
-## struktur
+## structure
 
-- `src/Board.h`, `src/Piece.h` – spiellogik, unabhängig von SFML
-- `src/main.cpp` – desktop version mit SFML
-- `src/wasm_bindings.cpp` – bindet dieselbe logik per embind an javascript
+- `src/Board.h`, `src/Piece.h` – game logic, independent of SFML
+- `src/main.cpp` – desktop version with SFML
+- `src/wasm_bindings.cpp` – binds the same logic to javascript via embind
 - `web/` – browser frontend (html/css/js)
 
-## ausführen
+## run
 
-desktop (braucht SFML 3):
+desktop (needs SFML 3):
 
 ```bash
 cmake -B build && cmake --build build && ./build/chess_game
 ```
 
-web (braucht das emscripten sdk):
+web (needs the emscripten sdk):
 
 ```bash
 ./build_wasm.sh
